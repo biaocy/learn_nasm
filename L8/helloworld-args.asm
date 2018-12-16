@@ -1,0 +1,22 @@
+; Hello World Program (Passing argument from the command line)
+; make run
+
+%include		'functions.asm'
+
+SECTION	.text
+global	_start
+
+_start:
+
+	pop		ecx
+
+nextArg:
+	cmp		ecx, 0h
+	jz		noMoreArgs
+	pop		eax
+	call	sprintLF
+	dec		ecx
+	jmp		nextArg
+
+noMoreArgs:
+	call	quit
