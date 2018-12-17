@@ -1,5 +1,7 @@
 ; Execute
-; make run
+; make ARGS="echo" run
+; make ARGS="ls" run
+; make ARGS="sleep" run
 
 %include		'functions.asm'
 
